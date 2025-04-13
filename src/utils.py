@@ -13,8 +13,8 @@ def init_logger() -> logging.Logger:
 
     Returns:
         logging.Logger: Initialized logger
-    """
 
+    """
     logging.basicConfig(
         level=config.log_level,
         format="%(message)s",

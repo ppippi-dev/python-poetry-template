@@ -1,15 +1,16 @@
 """settings.py"""
 
-from pydantic import Field
-from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic import BaseModel, Field
+from pydantic_settings import SettingsConfigDict
 
 
-class Config(BaseSettings):
+class Config(BaseModel):
     """Config
 
     Attributes:
         env: (local, dev, prod)
         log_level: logging level
+
     """
 
     model_config = SettingsConfigDict(env_file=".env")

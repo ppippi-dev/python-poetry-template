@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "python-poetry-template"
 version = "0.1.0"
-description = ""
+description = "python-poetry-template"
 authors = ["ppippi <wjdqlsdlsp@naver.com>"]
 readme = "README.md"
 packages = [
@@ -14,7 +14,28 @@ pydantic = "^2.9.2"
 pydantic-settings = "^2.6.1"
 rich = "^13.9.4"
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 119
+
+[tool.ruff]
+line-length = 119
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "D", "C90"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+explicit_package_bases = true
+ignore_missing_imports = true
+package_root = "src"
+plugins = ["pydantic.mypy"]
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true

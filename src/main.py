@@ -1,7 +1,4 @@
-"""main.py
-
-poetry run python src/main.py
-"""
+"""main.py"""
 
 from src.settings import config
 from src.utils import init_logger
