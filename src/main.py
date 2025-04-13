@@ -7,7 +7,7 @@ logger = init_logger()
 
 
 def main() -> None:
-    """Main function"""
+    """Run the main application."""
     logger.info("env: %s", config.env)
     logger.info("Hello, World!")
 

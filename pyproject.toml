@@ -25,7 +25,8 @@ line-length = 119
 line-length = 119
 
 [tool.ruff.lint]
-select = ["E", "F", "W", "I", "D", "C90"]
+select = ["E", "F", "W", "I", "D", "C"]
+ignore = ["D203", "D213", "D400", "D415"]
 
 [tool.mypy]
 python_version = "3.11"
@@ -33,7 +34,6 @@ strict = true
 explicit_package_bases = true
 ignore_missing_imports = true
 package_root = "src"
-plugins = ["pydantic.mypy"]
 
 [tool.pydantic-mypy]
 init_forbid_extra = true
