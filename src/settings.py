@@ -1,10 +1,10 @@
 """settings.py"""
 
-from pydantic import BaseModel, Field
-from pydantic_settings import SettingsConfigDict
+from pydantic import Field
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
-class Config(BaseModel):
+class Config(BaseSettings):
     """Config
 
     Attributes:
